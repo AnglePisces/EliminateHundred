@@ -1,0 +1,27 @@
+﻿using UnityEngine;
+using System.Collections;
+using TFramework.Base;
+
+/// <summary>
+///
+///写明注释 类的主要作用
+///
+/// </summary>
+public class #NAME# : TMonoSingleton<#NAME#>
+{
+
+	private #NAME#() { }
+
+	//初始化
+    public override void Initialization(GameObject parentOBJ)
+    {
+        base.Initialization(parentOBJ);
+    }
+
+    //继承重写销毁函数 里面有基类销毁管理
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+    }
+
+}

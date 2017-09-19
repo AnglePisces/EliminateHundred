@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <ResourceFile>
+    <!-- TFramework XML -->
+    <item name="AudioClipResourcesInventory.xml" packagename="XML" path="ResourceInventoryFile/AudioClipResourcesInventory" version="0"/>
+    <item name="TextureResourcesInventory.xml" packagename="XML" path="ResourceInventoryFile/TextureResourcesInventory" version="0"/>
+    <item name="PrefabsResourcesInventory.xml" packagename="XML" path="ResourceInventoryFile/PrefabsResourcesInventory" version="0"/>
+    <item name="MaterialResourcesInventory.xml" packagename="XML" path="ResourceInventoryFile/MaterialResourcesInventory" version="0"/>
+    <item name="AnimatorResourcesInventory.xml" packagename="XML" path="ResourceInventoryFile/AnimatorResourcesInventory" version="0"/>
+    <item name="XmlResourcesInventory.xml" packagename="XML" path="ResourceInventoryFile/XmlResourcesInventory" version="0"/>
+    <item name="JsonResourcesInventory.xml" packagename="XML" path="ResourceInventoryFile/JsonResourcesInventory" version="0"/>
+
+  </ResourceFile>
+</resources>

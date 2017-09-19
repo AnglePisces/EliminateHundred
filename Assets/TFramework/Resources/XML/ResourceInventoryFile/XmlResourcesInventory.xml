@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<ResourceFile>
+		<item name="test.xml" packagename="Resources" path="XML/ModuleConfig/test" version="0"/>
+	</ResourceFile>
+</resources>

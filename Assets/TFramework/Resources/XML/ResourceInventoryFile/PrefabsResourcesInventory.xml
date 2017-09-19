@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <ResourceFile>
+    <item name="test.prefab" packagename="Resources" path="Prefabs/System/test" useFrequency="0" version="0"/>
+    <item name="Loading" packagename="Resources" path="Prefabs/UI/Loading" useFrequency="0" version="0"/>
+  </ResourceFile>
+</resources>

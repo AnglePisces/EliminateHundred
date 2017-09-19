@@ -1,0 +1,15 @@
+﻿using UnityEngine;
+using System.Collections;
+using TFramework.Base;
+
+/// <summary>
+///
+///写明注释 类的主要作用
+///
+/// </summary>
+public class #NAME# : TSingleton<#NAME#>
+{
+
+	private #NAME#() { }
+
+}

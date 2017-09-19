@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <ResourceFile>
+    <item name="test.mat" packagename="Resources" path="Materials/test" version="0"/>
+  </ResourceFile>
+</resources>
