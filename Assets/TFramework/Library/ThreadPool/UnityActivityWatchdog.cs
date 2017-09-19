@@ -47,7 +47,7 @@ namespace Frankfort.Threading.Internal
 		private static void CreateHelperGameObject()
 		{
 			GameObject gameObject = new GameObject("UnityActivityHelper");
-			UnityActivityWatchdog unityActivityWatchdog = gameObject.AddComponent<UnityActivityWatchdog>();
+			gameObject.AddComponent<UnityActivityWatchdog>();
             UnityEngine.Object.DontDestroyOnLoad(gameObject);
 			UnityActivityWatchdog.helperCreated = true;
 		}

@@ -1,16 +1,23 @@
-﻿using TFramework.Base;
+﻿using EHEvent;
+using EventHandleModel;
+using TFramework.Base;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadingUI : TMonoBehaviour
+/// <summary>
+/// 
+/// 加载界面
+/// 
+/// </summary>
+
+public class LoadingUI : TUIMonoBehaviour
 {
     //进度条
     protected Slider _loadSlider;
     //当前的加载进度
     protected float _loadProgress;
 
-
-    public void Initialization()
+    public override void Initialization()
     {
         FindChild();
 
@@ -18,24 +25,19 @@ public class LoadingUI : TMonoBehaviour
         InvokeRepeating("StartLoading", 0.3f, 0.1f);
     }
 
-    protected void FindChild()
+    protected override void FindChild()
     {
-        this._loadSlider = this.gameObject.transform.FindChild("loadSlider").GetComponent<Slider>();
+        _loadSlider = transform.Find("loadSlider").GetComponent<Slider>();
     }
 
-    //添加事件消息
-    protected void AddEvent()
-    {
-       
-    }
-
+    //开始加载
     protected void StartLoading()
     {
         _loadProgress += Random.Range(0f, 0.1f);
-        if (_loadProgress >=1)
+        if (_loadProgress >= 1)
         {
             _loadProgress = 1;
-            CancelInvoke("StartLoading");
+            FinishLoading();
         }
         SetLoadSlider(_loadProgress);
     }
@@ -46,5 +48,22 @@ public class LoadingUI : TMonoBehaviour
         this._loadSlider.value = v;
     }
 
+    //加载完成
+    protected void FinishLoading()
+    {
+        CancelInvoke("StartLoading");
 
+        EHLoadingEvent evt = new EHLoadingEvent();
+        evt._LoadingState = true;
+        if (EventCenter.Instance != null)
+            EventCenter.Instance.TriggerEvent(evt);
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        _loadSlider = null;
+
+    }
 }

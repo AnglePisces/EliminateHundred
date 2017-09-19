@@ -1,5 +1,9 @@
 ﻿using EventHandleModel;
-
+/// <summary>
+/// 
+/// 事件类
+/// 
+/// </summary>
 namespace EHEvent
 {
 

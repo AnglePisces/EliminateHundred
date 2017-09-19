@@ -20,7 +20,7 @@ public class TFrameworkEditor : MonoBehaviour
 #region 创建C#Singleton脚本
 public class CreateTSingleton
 {
-    [MenuItem("Assets/TFramework/TFramework/Create/C#_TSingleton", false, 49)]
+    [MenuItem("Assets/TFramework/Create/C#_TSingleton", false, 49)]
     public static void CreatNewLua()
     {
         ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
@@ -50,7 +50,7 @@ public class CreateTSingleton
 #region 创建TMonoBehaviour脚本
 public class CreateTMonoBehaviour
 {
-    [MenuItem("Assets/TFramework/TFramework/Create/C#_TMonoBehaviour", false, 50)]
+    [MenuItem("Assets/TFramework/Create/C#_TMonoBehaviour", false, 50)]
     public static void CreatNewLua()
     {
         ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
@@ -76,17 +76,46 @@ public class CreateTMonoBehaviour
     }
 }
 #endregion
-#region 创建CreateTMonoSingletonBehaviour脚本
-public class CreateTMonoSingletonBehaviour
+#region 创建TUIMonoBehaviour脚本
+public class CreateTUIMonoBehaviour
 {
-    [MenuItem("Assets/TFramework/TFramework/Create/C#_TMonoSingletonBehaviour", false, 51)]
+    [MenuItem("Assets/TFramework/Create/C#_TUIMonoBehaviour", false, 50)]
     public static void CreatNewLua()
     {
         ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
         ScriptableObject.CreateInstance<MyDoCreateScriptAsset>(),
         GetSelectedPathOrFallback() + "/New Script.cs",
         null,
-       "Assets/TFramework/Editor/TFramework/Template/02-C# TMonoSingletonBehaviourTemplate.txt");
+       "Assets/TFramework/Editor/TFramework/Template/02-C# TUIMonoBehaviourTemplate.txt");
+    }
+
+    public static string GetSelectedPathOrFallback()
+    {
+        string path = "Assets";
+        foreach (UnityEngine.Object obj in Selection.GetFiltered(typeof(UnityEngine.Object), SelectionMode.Assets))
+        {
+            path = AssetDatabase.GetAssetPath(obj);
+            if (!string.IsNullOrEmpty(path) && File.Exists(path))
+            {
+                path = Path.GetDirectoryName(path);
+                break;
+            }
+        }
+        return path;
+    }
+}
+#endregion
+#region 创建CreateTMonoSingletonBehaviour脚本
+public class CreateTMonoSingletonBehaviour
+{
+    [MenuItem("Assets/TFramework/Create/C#_TMonoSingletonBehaviour", false, 51)]
+    public static void CreatNewLua()
+    {
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
+        ScriptableObject.CreateInstance<MyDoCreateScriptAsset>(),
+        GetSelectedPathOrFallback() + "/New Script.cs",
+        null,
+       "Assets/TFramework/Editor/TFramework/Template/03-C# TMonoSingletonBehaviourTemplate.txt");
     }
 
     public static string GetSelectedPathOrFallback()

@@ -1,4 +1,9 @@
-﻿namespace EHEvent
+﻿/// <summary>
+/// 
+/// 事件ID
+/// 
+/// </summary>
+namespace EHEvent
 {
     public enum EHGameProcessEventID : int
     {

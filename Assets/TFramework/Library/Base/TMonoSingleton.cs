@@ -12,7 +12,7 @@ namespace TFramework.Base
     /// </summary>
     public abstract class TMonoSingleton<T> : TMonoBehaviour where T : TMonoSingleton<T>
     {
-        private static T _instance = null;
+        protected static T _instance = null;
         private static object _instancelock = new object();
 
         public static T Instance

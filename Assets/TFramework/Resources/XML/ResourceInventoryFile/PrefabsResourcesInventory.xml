@@ -2,6 +2,7 @@
 <resources>
   <ResourceFile>
     <item name="test.prefab" packagename="Resources" path="Prefabs/System/test" useFrequency="0" version="0"/>
-    <item name="Loading" packagename="Resources" path="Prefabs/UI/Loading" useFrequency="0" version="0"/>
+    <item name="LoadingUI" packagename="Resources" path="Prefabs/UI/LoadingUI" useFrequency="0" version="0"/>
+    <item name="LoginUI" packagename="Resources" path="Prefabs/UI/LoginUI" useFrequency="0" version="0"/>
   </ResourceFile>
 </resources>
