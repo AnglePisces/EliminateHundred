@@ -4,5 +4,6 @@
     <item name="test.prefab" packagename="Resources" path="Prefabs/System/test" useFrequency="0" version="0"/>
     <item name="LoadingUI" packagename="Resources" path="Prefabs/UI/LoadingUI" useFrequency="0" version="0"/>
     <item name="LoginUI" packagename="Resources" path="Prefabs/UI/LoginUI" useFrequency="0" version="0"/>
+    <item name="MainUI" packagename="Resources" path="Prefabs/UI/MainUI" useFrequency="0" version="0"/>
   </ResourceFile>
 </resources>

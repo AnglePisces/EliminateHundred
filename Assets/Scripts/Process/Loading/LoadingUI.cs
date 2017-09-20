@@ -54,9 +54,8 @@ public class LoadingUI : TUIMonoBehaviour
         CancelInvoke("StartLoading");
 
         EHLoadingEvent evt = new EHLoadingEvent();
-        evt._LoadingState = true;
-        if (EventCenter.Instance != null)
-            EventCenter.Instance.TriggerEvent(evt);
+        evt._state = true;
+        EventCenter.Instance.TriggerEvent(evt);
     }
 
     protected override void OnDestroy()

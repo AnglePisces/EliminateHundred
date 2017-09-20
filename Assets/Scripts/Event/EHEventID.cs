@@ -11,6 +11,10 @@ namespace EHEvent
         /// 下载事件
         /// </summary>
         Process_Loading_Event,
+        /// <summary>
+        /// 登录事件
+        /// </summary>
+        Process_Login_Event
     }
 
 }
