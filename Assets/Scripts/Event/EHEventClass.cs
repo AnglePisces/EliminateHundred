@@ -16,7 +16,7 @@ namespace EHEvent
         }
 
 
-        //是否下载正确
+        //是否成功
         public bool _state;
         //错误信息
         public string _log;
@@ -33,7 +33,7 @@ namespace EHEvent
 
     }
 
-    //加载事件
+    //登录事件
     public class EHLoginEvent : IEvent
     {
 
@@ -43,7 +43,7 @@ namespace EHEvent
         }
 
 
-        //是否登录成功
+        //是否成功
         public bool _state;
         //错误信息
         public string _log;
@@ -60,4 +60,34 @@ namespace EHEvent
 
     }
 
+    //注册事件
+    public class EHRegisterEvent : IEvent
+    {
+
+        public int EventType
+        {
+            get { return (int)EHGameProcessEventID.Process_Register_Event; }
+        }
+
+
+        //是否成功
+        public bool _state;
+        //错误信息
+        public string _log;
+        //注册的帐号
+        public string _id;
+        //注册的密码
+        public string _pwd;
+
+        public void DestroySelf()
+        {
+        }
+
+        public string ToSring()
+        {
+            string msg = string.Format("EventType:{0},State:{1},Log:{2}", EHGameProcessEventID.Process_Register_Event.ToString(), _state, _log);
+            return msg;
+        }
+
+    }
 }

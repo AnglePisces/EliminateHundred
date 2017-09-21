@@ -14,7 +14,11 @@ namespace EHEvent
         /// <summary>
         /// 登录事件
         /// </summary>
-        Process_Login_Event
+        Process_Login_Event,
+        /// <summary>
+        /// 注册事件
+        /// </summary>
+        Process_Register_Event
     }
 
 }
