@@ -7,6 +7,7 @@ namespace EventHandleModel
     using UnityEngine;
     using TFramework.Base;
     using System.Collections.Generic;
+    using System;
 
     /// <summary>
     ///
@@ -19,7 +20,10 @@ namespace EventHandleModel
         private EventCenter()
         {
         }
+        public override void Initialization()
+        {
 
+        }
         //初始化
         public override void Initialization(GameObject parentOBJ)
         {

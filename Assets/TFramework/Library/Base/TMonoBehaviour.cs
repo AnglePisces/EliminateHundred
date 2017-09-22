@@ -13,7 +13,7 @@ namespace TFramework.Base
     /// 1 消息收发器,实现消息收发管理,消息注册释放
     /// 
     /// </summary>
-    public class TMonoBehaviour : TMono, IMsgTransceiver
+    public abstract class TMonoBehaviour : TMono, IMsgTransceiver
     {
         #region 委托消息维护
 
@@ -175,6 +175,18 @@ namespace TFramework.Base
         }
 
         #endregion
+
+
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        public abstract void Initialization();
+
+        /// <summary>
+        /// 传入节点对象的初始化
+        /// </summary>
+        /// <param name="parentOBJ">节点对象</param>
+        public abstract void Initialization(GameObject parentOBJ);
 
         /// <summary>
         /// 销毁回调 

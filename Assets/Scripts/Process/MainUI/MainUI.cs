@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using TFramework.Base;
+using System;
 
 /// <summary>
 ///
@@ -10,16 +11,21 @@ using TFramework.Base;
 public class MainUI : TUIMonoBehaviour
 {
 
-	private MainUI() { }
+    private MainUI() { }
 
-	public override void Initialization()
+    public override void Initialization()
     {
-       
+
+    }
+
+    public override void Initialization(GameObject parentOBJ)
+    {
+
     }
 
     protected override void FindChild()
     {
-       
+
     }
 
 }

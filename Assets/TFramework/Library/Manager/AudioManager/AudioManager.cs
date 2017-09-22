@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using TFramework.Base;
+using System;
 
 /// <summary>
 /// 
@@ -14,6 +15,11 @@ using TFramework.Base;
 public class AudioManager : TMonoSingleton<AudioManager>
 {
     public AudioManager() { }
+
+    public override void Initialization()
+    {
+        
+    }
 
     //初始化
     public override void Initialization(GameObject parentOBJ)

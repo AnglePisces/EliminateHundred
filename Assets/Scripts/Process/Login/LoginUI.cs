@@ -56,6 +56,11 @@ public class LoginUI : TUIMonoBehaviour
         BackFirstUI();
     }
 
+    public override void Initialization(GameObject parentOBJ)
+    {
+        
+    }
+
     protected override void FindChild()
     {
 

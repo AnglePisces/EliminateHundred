@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using TFramework.Base;
+using System;
 
 /// <summary>
 /// 
@@ -16,10 +17,21 @@ public class QuitGameControl : TMonoSingleton<QuitGameControl>
     /// </summary>
     static public bool IsQuitGame = false;
 
+    public override void Initialization()
+    {
+
+    }
+
     //初始化
     public override void Initialization(GameObject parentOBJ)
     {
         base.Initialization(parentOBJ);
+    }
+
+    void OnApplicationQuit()
+    {
+        TLogger.Quit();
+        Loom.AbortRunningThreads();
     }
 
 }

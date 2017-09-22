@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using TFramework.Base;
+using System;
 
 public class TMonoBGO : TMonoBehaviour
 {
@@ -29,5 +30,15 @@ public class TMonoBGO : TMonoBehaviour
     protected override void OnDestroy()
     {
         base.OnDestroy();
+    }
+
+    public override void Initialization()
+    {
+
+    }
+
+    public override void Initialization(GameObject parentOBJ)
+    {
+   
     }
 }

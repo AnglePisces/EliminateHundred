@@ -1,4 +1,5 @@
-﻿using EHEvent;
+﻿using System;
+using EHEvent;
 using EventHandleModel;
 using TFramework.Base;
 using UnityEngine;
@@ -25,6 +26,11 @@ public class LoadingUI : TUIMonoBehaviour
         InvokeRepeating("StartLoading", 0.3f, 0.1f);
     }
 
+    public override void Initialization(GameObject parentOBJ)
+    {
+
+    }
+
     protected override void FindChild()
     {
         _loadSlider = transform.Find("loadSlider").GetComponent<Slider>();
@@ -33,7 +39,7 @@ public class LoadingUI : TUIMonoBehaviour
     //开始加载
     protected void StartLoading()
     {
-        _loadProgress += Random.Range(0f, 0.1f);
+        _loadProgress += UnityEngine.Random.Range(0f, 0.1f);
         if (_loadProgress >= 1)
         {
             _loadProgress = 1;
@@ -65,4 +71,5 @@ public class LoadingUI : TUIMonoBehaviour
         _loadSlider = null;
 
     }
+
 }

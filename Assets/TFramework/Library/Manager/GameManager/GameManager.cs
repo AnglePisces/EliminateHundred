@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using TFramework.Base;
+using System;
 
 /// <summary>
 ///
@@ -15,7 +16,12 @@ public class GameManager<T> : TMonoSingleton<T> where T : GameManager<T>
 
 	public GameManager() { }
 
-	//初始化
+    public override void Initialization()
+    {
+       
+    }
+
+    //初始化
     public override void Initialization(GameObject parentOBJ)
     {
         base.Initialization(parentOBJ);

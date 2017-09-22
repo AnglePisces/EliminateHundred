@@ -12,12 +12,12 @@ public class #NAME# : TUIMonoBehaviour
 
 	private #NAME#() { }
 
-	public override void Initalization()
+	public override void Initialization()
     {
        
     }
 
-    public override void FindChild()
+    protected override void FindChild()
     {
        
     }

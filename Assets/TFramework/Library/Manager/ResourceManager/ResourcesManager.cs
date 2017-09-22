@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Xml;
 using TFramework.Base;
+using System;
 
 /// <summary>
 /// 
@@ -21,6 +22,11 @@ public class ResourcesManager : TMonoSingleton<ResourcesManager>
 
     //资源性能优化
     protected OptimizeManager m_optimizeManager = null;
+
+    public override void Initialization()
+    {
+       
+    }
 
     //初始化
     public override void Initialization(GameObject parentOBJ)
