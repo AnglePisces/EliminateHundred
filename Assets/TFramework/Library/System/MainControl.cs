@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using EventHandleModel;
 using UnityEngine;
 
 namespace TFramework.System
@@ -23,6 +24,9 @@ namespace TFramework.System
             Loom.Init();
             //日志模块
             TLogger.Instance.ToString();
+
+            //事件管理
+            EventCenter.Instance.Initialization(this.gameObject, true);
 
             TLogger.Log("基础模块开始初始化.", "MainControl", "Awake - IniMainModules");
             IniMainModules();

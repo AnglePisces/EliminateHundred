@@ -49,7 +49,7 @@ namespace TFramework.Base
                             _instance = singleton.AddComponent<T>();
                             singleton.name = "(monoSingleton) " + typeof(T).ToString();
 
-                            DontDestroyOnLoad(singleton);
+                            //DontDestroyOnLoad(singleton);
 
                             Debug.Log("[TMonoSingleton] An instance of " + typeof(T) +
                                     " is needed in the scene, so '" + singleton +

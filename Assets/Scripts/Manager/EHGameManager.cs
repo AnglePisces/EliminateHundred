@@ -1,6 +1,9 @@
-﻿using EHEvent;
+﻿using System.Collections;
+using EHEvent;
 using EventHandleModel;
+using Game;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 
@@ -52,7 +55,7 @@ public class EHGameManager : GameManager<EHGameManager>
         _loadingUI = null;
 
         _loginUI = ResourcesManager.Instance.GetIniPrefabResourceByName("LoginUI").AddComponent<LoginUI>();
-        _loginUI.Initialization(null,false);
+        _loginUI.Initialization(null, false);
 
         EventCenter.Instance.RemoveEventListenerPermanently((int)EHGameProcessEventID.Process_Loading_Event, FinishLoadingGame);
     }
@@ -64,7 +67,28 @@ public class EHGameManager : GameManager<EHGameManager>
         _loginUI = null;
 
         _mainUI = ResourcesManager.Instance.GetIniPrefabResourceByName("MainUI").AddComponent<MainUI>();
-        _mainUI.Initialization(null,false);
+        _mainUI.Initialization(null, false);
+    }
+
+    //开始游戏
+    public void StartGame()
+    {
+        //这里目前只做最简单的处理
+        //切换场镜 初始化对象
+        SceneManager.LoadScene("Game");
+
+        //开始加载场景
+        StartCoroutine("StartGameLoading");
+    }
+
+    //异步加载场景开始游戏 -- 临时
+    private IEnumerator StartGameLoading()
+    {
+        AsyncOperation async = SceneManager.LoadSceneAsync("Game");
+        yield return async;
+
+        //游戏场景初始化
+        GameSceneControl.Instance.Initialization(null, false);
     }
 
 }

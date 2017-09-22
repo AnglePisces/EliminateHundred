@@ -12,6 +12,7 @@ public class EHMainControl : MainControl
     protected override void Awake()
     {
         base.Awake();
+
         EHGameManager.Instance.Initialization(this.gameObject, true);
 
     }

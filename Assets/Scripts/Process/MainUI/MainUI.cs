@@ -5,7 +5,7 @@ using System;
 
 /// <summary>
 ///
-///写明注释 类的主要作用
+/// 主界面UI
 ///
 /// </summary>
 public class MainUI : TUIMonoBehaviour
@@ -13,9 +13,10 @@ public class MainUI : TUIMonoBehaviour
 
     private MainUI() { }
 
-    public override void Initialization(GameObject parentOBJ, bool beChild)
+    public override void Initialization(GameObject obj, bool beChild)
     {
-
+        //目前主界面不做任何事情 直接开始游戏
+        EHGameManager.Instance.StartGame();
     }
 
     protected override void FindChild()

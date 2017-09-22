@@ -181,7 +181,7 @@ namespace TFramework.Base
         /// 初始化
         /// </summary>
         /// <param name="parentOBJ">节点对象</param>
-        /// /// <param name="beChild">是否成为节点对象的子节点</param>
+        /// <param name="beChild">是否成为节点对象的子节点</param>
         public override void Initialization(GameObject obj, bool beChild)
         {
             if (obj != null)
