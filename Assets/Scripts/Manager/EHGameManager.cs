@@ -19,9 +19,9 @@ public class EHGameManager : GameManager<EHGameManager>
     protected MainUI _mainUI;
 
     //初始化
-    public override void Initialization(GameObject parentOBJ)
+    public override void Initialization(GameObject parentOBJ, bool beChild)
     {
-        base.Initialization(parentOBJ);
+        base.Initialization(parentOBJ, beChild);
 
         //初始化完成 启动加载界面
         LoadingGame();
@@ -34,7 +34,7 @@ public class EHGameManager : GameManager<EHGameManager>
         EventCenter.Instance.AddEventListenerPermanently((int)EHGameProcessEventID.Process_Loading_Event, FinishLoadingGame);
 
         _loadingUI = ResourcesManager.Instance.GetIniPrefabResourceByName("LoadingUI").AddComponent<LoadingUI>();
-        _loadingUI.Initialization();
+        _loadingUI.Initialization(null, false);
     }
 
     //加载游戏完成
@@ -52,7 +52,7 @@ public class EHGameManager : GameManager<EHGameManager>
         _loadingUI = null;
 
         _loginUI = ResourcesManager.Instance.GetIniPrefabResourceByName("LoginUI").AddComponent<LoginUI>();
-        _loginUI.Initialization();
+        _loginUI.Initialization(null,false);
 
         EventCenter.Instance.RemoveEventListenerPermanently((int)EHGameProcessEventID.Process_Loading_Event, FinishLoadingGame);
     }
@@ -64,7 +64,7 @@ public class EHGameManager : GameManager<EHGameManager>
         _loginUI = null;
 
         _mainUI = ResourcesManager.Instance.GetIniPrefabResourceByName("MainUI").AddComponent<MainUI>();
-        _mainUI.Initialization();
+        _mainUI.Initialization(null,false);
     }
 
 }

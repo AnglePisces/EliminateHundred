@@ -22,7 +22,7 @@ public class DemoMainController : MainControl
     {
         base.Awake();
 
-        DemoGameManager.Instance.Initialization(this.gameObject);
+        DemoGameManager.Instance.Initialization(this.gameObject, true);
     }
 
 }

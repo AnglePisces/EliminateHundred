@@ -23,15 +23,10 @@ public class ResourcesManager : TMonoSingleton<ResourcesManager>
     //资源性能优化
     protected OptimizeManager m_optimizeManager = null;
 
-    public override void Initialization()
-    {
-       
-    }
-
     //初始化
-    public override void Initialization(GameObject parentOBJ)
+    public override void Initialization(GameObject parentOBJ, bool beChild)
     {
-        base.Initialization(parentOBJ);
+        base.Initialization(parentOBJ, beChild);
 
         IniEveryResourcesController();
     }

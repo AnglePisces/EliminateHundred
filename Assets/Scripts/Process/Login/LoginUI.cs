@@ -47,18 +47,13 @@ public class LoginUI : TUIMonoBehaviour
     //返回按钮
     protected Button _registerBack;
     #endregion
-    public override void Initialization()
+    public override void Initialization(GameObject parentOBJ, bool beChild)
     {
         FindChild();
 
         AddListener();
 
         BackFirstUI();
-    }
-
-    public override void Initialization(GameObject parentOBJ)
-    {
-        
     }
 
     protected override void FindChild()

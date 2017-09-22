@@ -18,17 +18,12 @@ public class LoadingUI : TUIMonoBehaviour
     //当前的加载进度
     protected float _loadProgress;
 
-    public override void Initialization()
+    public override void Initialization(GameObject parentOBJ, bool beChild)
     {
         FindChild();
 
         //开始加载 临时UI层效果
         InvokeRepeating("StartLoading", 0.3f, 0.1f);
-    }
-
-    public override void Initialization(GameObject parentOBJ)
-    {
-
     }
 
     protected override void FindChild()

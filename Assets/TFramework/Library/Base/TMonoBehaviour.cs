@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TFramework.Global;
 using TFramework.Manager.EventManager;
 using UnityEngine;
@@ -13,7 +14,7 @@ namespace TFramework.Base
     /// 1 消息收发器,实现消息收发管理,消息注册释放
     /// 
     /// </summary>
-    public abstract class TMonoBehaviour : TMono, IMsgTransceiver
+    public class TMonoBehaviour : TMono, IMsgTransceiver
     {
         #region 委托消息维护
 
@@ -176,17 +177,21 @@ namespace TFramework.Base
 
         #endregion
 
-
         /// <summary>
         /// 初始化
         /// </summary>
-        public abstract void Initialization();
-
-        /// <summary>
-        /// 传入节点对象的初始化
-        /// </summary>
         /// <param name="parentOBJ">节点对象</param>
-        public abstract void Initialization(GameObject parentOBJ);
+        /// /// <param name="beChild">是否成为节点对象的子节点</param>
+        public override void Initialization(GameObject obj, bool beChild)
+        {
+            if (obj != null)
+            {
+                if (beChild)
+                {
+                    this.transform.parent = obj.transform;
+                }
+            }
+        }
 
         /// <summary>
         /// 销毁回调 
@@ -196,5 +201,6 @@ namespace TFramework.Base
         {
             GoUnAllReqisterMsg();
         }
+
     }
 }

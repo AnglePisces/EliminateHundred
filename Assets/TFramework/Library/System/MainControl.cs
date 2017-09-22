@@ -42,11 +42,11 @@ namespace TFramework.System
         protected virtual void IniMainModules()
         {
             //游戏退出模块
-            QuitGameControl.Instance.Initialization(this.gameObject);
+            QuitGameControl.Instance.Initialization(this.gameObject, true);
             //资源管理器
-            ResourcesManager.Instance.Initialization(this.gameObject);
+            ResourcesManager.Instance.Initialization(this.gameObject, true);
             //音频播放管理
-            AudioManager.Instance.Initialization(this.gameObject);
+            AudioManager.Instance.Initialization(this.gameObject, true);
         }
 
         //初始化边缘模块

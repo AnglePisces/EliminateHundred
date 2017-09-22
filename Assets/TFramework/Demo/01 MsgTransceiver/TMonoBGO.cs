@@ -31,14 +31,4 @@ public class TMonoBGO : TMonoBehaviour
     {
         base.OnDestroy();
     }
-
-    public override void Initialization()
-    {
-
-    }
-
-    public override void Initialization(GameObject parentOBJ)
-    {
-   
-    }
 }

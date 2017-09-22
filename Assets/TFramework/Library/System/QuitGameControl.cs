@@ -17,15 +17,10 @@ public class QuitGameControl : TMonoSingleton<QuitGameControl>
     /// </summary>
     static public bool IsQuitGame = false;
 
-    public override void Initialization()
-    {
-
-    }
-
     //初始化
-    public override void Initialization(GameObject parentOBJ)
+    public override void Initialization(GameObject parentOBJ, bool beChild)
     {
-        base.Initialization(parentOBJ);
+        base.Initialization(parentOBJ, beChild);
     }
 
     void OnApplicationQuit()

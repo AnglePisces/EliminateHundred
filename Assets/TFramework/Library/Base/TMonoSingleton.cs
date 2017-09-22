@@ -67,12 +67,6 @@ namespace TFramework.Base
             }
         }
 
-        //可选项 -- 被动初始化函数 将manager放到指定对象下面
-        public override void Initialization(GameObject parentOBJ)
-        {
-            this.gameObject.transform.parent = parentOBJ.transform;
-        }
-
         protected override void OnDestroy()
         {
             _instance = null;

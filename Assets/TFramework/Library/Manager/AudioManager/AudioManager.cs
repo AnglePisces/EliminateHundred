@@ -16,15 +16,10 @@ public class AudioManager : TMonoSingleton<AudioManager>
 {
     public AudioManager() { }
 
-    public override void Initialization()
-    {
-        
-    }
-
     //初始化
-    public override void Initialization(GameObject parentOBJ)
+    public override void Initialization(GameObject parentOBJ, bool beChild)
     {
-        base.Initialization(parentOBJ);
+        base.Initialization(parentOBJ, beChild);
     }
 
     #region Public Function

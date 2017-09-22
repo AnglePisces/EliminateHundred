@@ -14,17 +14,12 @@ using System;
 public class GameManager<T> : TMonoSingleton<T> where T : GameManager<T>
 {
 
-	public GameManager() { }
-
-    public override void Initialization()
-    {
-       
-    }
+    public GameManager() { }
 
     //初始化
-    public override void Initialization(GameObject parentOBJ)
+    public override void Initialization(GameObject parentOBJ, bool beChild)
     {
-        base.Initialization(parentOBJ);
+        base.Initialization(parentOBJ, beChild);
     }
 
     //继承重写销毁函数 里面有基类销毁管理

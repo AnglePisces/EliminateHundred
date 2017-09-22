@@ -13,12 +13,7 @@ public class MainUI : TUIMonoBehaviour
 
     private MainUI() { }
 
-    public override void Initialization()
-    {
-
-    }
-
-    public override void Initialization(GameObject parentOBJ)
+    public override void Initialization(GameObject parentOBJ, bool beChild)
     {
 
     }
