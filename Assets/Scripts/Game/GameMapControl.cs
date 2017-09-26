@@ -20,6 +20,10 @@ namespace Game
         private GameMapControl() { }
 
         /// <summary>
+        /// 地图配置文件控制
+        /// </summary>
+        protected MapXMLManager _mapXmlManager;
+        /// <summary>
         /// 地图控制
         /// </summary>
         protected MapControl _mapControl;

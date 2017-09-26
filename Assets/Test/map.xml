@@ -1,0 +1,6 @@
+<MapManager>
+  <SpaceConfine xyAnnotation="x,y"  Annotation="空间界限" />
+  <SpaceObjList Annotation="空间对象列表">
+    <SpaceObj objType="" objName="" objID="" bindSpaceXY="x,y" direction="" Annotation="空间对象"/>
+  </SpaceObjList>
+</MapManager>
